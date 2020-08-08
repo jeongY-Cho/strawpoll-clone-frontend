@@ -57,7 +57,7 @@ export const VoteForm: React.FC<IVoteFormProps> = (props) => {
           Vote
         </button>
         <button
-          className="btn btn-secondary btn-sm"
+          className="btn btn-outline-secondary btn-sm"
           onClick={() => history.push(`${url}/r`)}
         >
           Results

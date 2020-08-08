@@ -7,7 +7,7 @@ export const GotoPollInput: React.FC<{ showButton?: boolean }> = ({
   const history = useHistory();
 
   const submit = () => {
-    window.location.href = `/${id}`;
+    window.location.href = `/${id.toLowerCase()}`;
   };
 
   return (

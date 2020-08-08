@@ -3,6 +3,7 @@ import Axios from "axios";
 import { useHistory } from "react-router-dom";
 export const NewPollForm: React.FC = (_props) => {
   const history = useHistory();
+  const [makeNew, updateMake] = React.useState(false);
   const [prompt, updatePrompt] = React.useState("");
   const [choices, updateChoices] = React.useState(["", ""]);
   const [customId, updateId] = React.useState("");
@@ -48,6 +49,7 @@ export const NewPollForm: React.FC = (_props) => {
               }
             }
           }}
+          autoFocus={i === choices.length - 1 && makeNew}
           onChange={(e) => {
             e.preventDefault();
             e.persist();
@@ -92,6 +94,7 @@ export const NewPollForm: React.FC = (_props) => {
           className="btn btn-outline-success btn-small"
           onClick={() => {
             if (choices[choices.length - 1]) {
+              updateMake(true);
               updateChoices(choices.concat([""]));
             }
           }}

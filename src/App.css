@@ -1,10 +1,22 @@
 .App {
   text-align: center;
+  padding: 30px;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+input {
+  margin: 5px;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+}
+
+input:focus {
+  outline: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {

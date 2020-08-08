@@ -13,7 +13,9 @@ export const NewPollForm: React.FC = (_props) => {
       const newPoll = {
         prompt,
         choices: filteredChoices,
-        id: customId.trim().replace(/ /g, "-").replace(/-$/, ""),
+        id: customId.length
+          ? customId.trim().replace(/ /g, "-").replace(/-$/, "")
+          : undefined,
       };
       console.log(newPoll);
       Axios.put("https://strawpoll.jeongyeoncho.com/api/new", newPoll).then(

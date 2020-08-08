@@ -74,6 +74,7 @@ export const Results: React.FC<IPoll> = (props) => {
               })}
             </tbody>
           </table>
+          <div>{props.total} Votes</div>
           <br />
           <CopyLink />
         </div>
